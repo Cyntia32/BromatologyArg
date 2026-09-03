@@ -1,0 +1,415 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff8ed;
+    color: #252525;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 90px;
+}
+
+.app {
+    width: 100%;
+    max-width: 500px;
+    padding: 30px 20px;
+}
+
+/* Título */
+
+h1 {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.subtitulo {
+    text-align: center;
+    margin-top: 0;
+    color: #77716a;
+    font-size: 0.95rem;
+}
+
+/* Tarjeta del dato */
+
+.dato {
+    margin-top: 25px;
+    padding: 28px;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(80, 55, 20, 0.08);
+    border: 1px solid #f0e5d5;
+}
+
+/* Categoría */
+
+.categoria {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    color: #a94d16;
+    background-color: #fff0df;
+    padding: 6px 11px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* Título del dato */
+
+.dato h2 {
+    margin-top: 18px;
+    margin-bottom: 10px;
+    font-size: 1.35rem;
+    line-height: 1.3;
+}
+
+/* Texto */
+
+.dato p {
+    line-height: 1.6;
+    color: #4d4a46;
+    min-height: 70px;
+}
+
+/* Botón */
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 14px;
+    background-color: #f4c542;
+    color: #252525;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(244, 197, 66, 0.3);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* =========================
+   SECCIONES
+========================= */
+
+.seccion {
+    margin-top: 55px;
+}
+
+.seccion-titulo {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.seccion-titulo > span {
+    font-size: 28px;
+}
+
+.seccion-titulo h2 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.seccion-titulo p {
+    margin: 6px 0 0;
+    color: #77716a;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   TARJETAS DE ENFERMEDADES
+========================= */
+
+.enfermedades {
+    display: grid;
+    gap: 16px;
+}
+
+.tarjeta-enfermedad {
+    background: #ffffff;
+    border: 1px solid #f0e5d5;
+    border-radius: 20px;
+    padding: 22px;
+    box-shadow: 0 8px 25px rgba(80, 55, 20, 0.05);
+}
+
+.etiqueta-enfermedad {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 20px;
+    background: #fff0df;
+    color: #a94d16;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.tarjeta-enfermedad h3 {
+    margin-top: 14px;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.tarjeta-enfermedad > p {
+    color: #4d4a46;
+    line-height: 1.55;
+    margin-bottom: 18px;
+}
+
+.info-enfermedad {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding-top: 12px;
+    margin-top: 12px;
+    border-top: 1px solid #f1ece5;
+    font-size: 0.88rem;
+}
+
+.info-enfermedad strong {
+    color: #252525;
+}
+
+.info-enfermedad span {
+    color: #66615b;
+    line-height: 1.45;
+}
+
+
+/* =========================
+   BUZÓN
+========================= */
+
+.buzon {
+    margin-top: 55px;
+    margin-bottom: 30px;
+    padding: 28px;
+    background: #fff3d1;
+    border: 1px solid #f4d889;
+    border-radius: 24px;
+    text-align: center;
+}
+
+.buzon-icono {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.buzon h2 {
+    margin: 0 0 8px;
+    font-size: 1.4rem;
+}
+
+.buzon > p {
+    margin: 0 auto 22px;
+    max-width: 380px;
+    color: #625b50;
+    line-height: 1.5;
+}
+
+.buzon form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buzon input,
+.buzon textarea {
+    width: 100%;
+    border: 1px solid #e5d7b8;
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-family: inherit;
+    font-size: 14px;
+    background: #ffffff;
+}
+
+.buzon textarea {
+    resize: vertical;
+}
+
+.buzon input:focus,
+.buzon textarea:focus {
+    outline: 2px solid #f4c542;
+    border-color: transparent;
+}
+
+.buzon button {
+    margin-top: 4px;
+}
+
+.buzon small {
+    display: block;
+    margin-top: 14px;
+    color: #81796d;
+    font-size: 11px;
+}
+
+/* =========================
+   NOVEDADES / BLOG
+========================= */
+
+.lista-noticias {
+    display: grid;
+    gap: 16px;
+}
+
+.tarjeta-noticia {
+    background: #ffffff;
+    border: 1px solid #f0e5d5;
+    border-radius: 20px;
+    padding: 22px;
+    box-shadow: 0 8px 25px rgba(80, 55, 20, 0.05);
+}
+
+.etiqueta-noticia {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 20px;
+    background: #fff0df;
+    color: #a94d16;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.tarjeta-noticia h3 {
+    margin-top: 14px;
+    margin-bottom: 6px;
+    font-size: 1.15rem;
+    line-height: 1.35;
+}
+
+.fecha-noticia {
+    margin-bottom: 12px;
+    color: #999087;
+    font-size: 0.78rem;
+}
+
+.resumen-noticia {
+    margin: 0;
+    color: #4d4a46;
+    line-height: 1.55;
+    font-size: 0.92rem;
+}
+
+.ver-noticias {
+    display: block;
+    margin-top: 18px;
+    text-align: center;
+    color: #a94d16;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.ver-noticias:hover {
+    text-decoration: underline;
+}
+
+.enlace-noticia {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.enlace-noticia h3 {
+    color: #252525;
+}
+
+.leer-noticia {
+    display: inline-block;
+    margin-top: 15px;
+    color: #a94d16;
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+/* =========================
+   NOTICIA INDIVIDUAL
+========================= */
+
+.volver-noticia {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: #a94d16;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.volver-noticia:hover {
+    text-decoration: underline;
+}
+
+.noticia-completa {
+    background: #ffffff;
+    border: 1px solid #f0e5d5;
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: 0 10px 30px rgba(80, 55, 20, 0.06);
+}
+
+.noticia-completa h1 {
+    text-align: left;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    font-size: 1.7rem;
+    line-height: 1.25;
+}
+
+.bajada-noticia {
+    margin-top: 22px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f1ece5;
+    color: #4d4a46;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+.contenido-noticia {
+    margin-top: 22px;
+}
+
+.contenido-noticia p {
+    color: #4d4a46;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.final-noticia {
+    display: block;
+    margin-top: 28px;
+    padding: 20px;
+    background: #fff3d1;
+    border: 1px solid #f4d889;
+    border-radius: 16px;
+    text-align: center;
+    color: #625b50;
+    line-height: 1.6;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.final-noticia:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(80, 55, 20, 0.08);
+}
