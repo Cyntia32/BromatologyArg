@@ -441,10 +441,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Forzar "reflow" para reiniciar la animación CSS
                 void title.offsetWidth;
 
-                /* Acá va tu lógica de cambio de texto */
-                // title.textContent = "Nuevo título...";
-                // paragraph.textContent = "Nueva explicación...";
-
                 title.classList.add('fade-change');
                 paragraph.classList.add('fade-change');
             }
