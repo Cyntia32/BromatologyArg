@@ -1,226 +1,530 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BromatologyArg</title>
-    <link rel="stylesheet" href="style.css">
-    <link 
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
-    rel="stylesheet">
-    <link 
-    rel="stylesheet" 
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BromatologyArg</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;800&family=Walter+Turncoat&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="style.css">
 
-</head>
-<body>
-    <main class="app">
-        <h1>🧪 BromatologyArg</h1>
+    </head>
+    <body>
 
-        <p class="subtitulo">
-            Datitos de Bromatología🍴
-        </p>
+        <nav class="navbar navbar-expand-lg py-3">
+            <div class="container-fluid px-4 px-md-5">
 
-        <section class="dato">
-            <span id="categoriaDato" class="categoria">
-                🧪BROMATOLOGÍA
-            </span>
-            <h2 id="tituloDato">
-                ¿Sabías que...?
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                    <span>BromatologyArg</span>
+                    <i class="bi bi-exclamation-triangle-fill icono-alerta"></i>
+                </a>
 
-            </h2>
-
-            <p id="textoDato">
-
-            </p>
-
-            <button id="botonDato">
-                🎲 Tirame un dato
-            </button>
-        </section>
-
-        <!-- ENFERMEDADES -->
-
-        <section class="seccion">
-
-            <div class="seccion-titulo">
-                <span>🦠</span>
-
-                <div>
-                    <h2>Enfermedades transmitidas por alimentos</h2>
-
-                    <p>
-                        Conocé algunos de los microorganismos y peligros
-                        asociados a los alimentos.
-                    </p>
-                </div>
-            </div>
-            <div class="enfermedades">
-
-                <article class="tarjeta-enfermedad">
-                    <span class="etiqueta-enfermedad">
-                        BACTERIA
-                    </span>
-
-                    <h3>Salmonelosis</h3>
-
-                    <p>
-                        Es una enfermedad causada por bacterias del género
-                        <em>Salmonella</em>.
-                    </p>
-
-                    <div class="info-enfermedad">
-                        <strong>Puede asociarse a:</strong>
-                        <span>🍗 Aves, huevos y otros alimentos contaminados.</span>
-                    </div>
-
-                    <div class="info-enfermedad">
-                        <strong>Prevención:</strong>
-                        <span>🧼 Higiene, cocción adecuada y evitar la contaminación cruzada.</span>
-                    </div>
-                </article>
-
-                <article class="tarjeta-enfermedad">
-                    <span class="etiqueta-enfermedad">
-                        BACTERIA
-                    </span>
-
-                    <h3>Listeriosis</h3>
-
-                    <p>
-                        Es una enfermedad causada por la bacteria
-                        <em>Listeria monocytogenes</em>.
-                    </p>
-
-                    <div class="info-enfermedad">
-                        <strong>Puede asociarse a:</strong>
-                        <span>🥛 Alimentos listos para consumir y productos contaminados.</span>
-                    </div>
-
-                    <div class="info-enfermedad">
-                        <strong>Prevención:</strong>
-                        <span>❄️ Mantener una correcta refrigeración y respetar las indicaciones del alimento.</span>
-                    </div>
-                </article>
-
-                <article class="tarjeta-enfermedad">
-                    <span class="etiqueta-enfermedad">
-                        BACTERIA
-                    </span>
-
-                    <h3>Campilobacteriosis</h3>
-
-                    <p>
-                        Es una enfermedad causada principalmente por bacterias
-                        del género <em>Campylobacter</em>.
-                    </p>
-
-                    <div class="info-enfermedad">
-                        <strong>Puede asociarse a:</strong>
-                        <span>🍗 Aves crudas o poco cocidas y contaminación cruzada.</span>
-                    </div>
-
-                    <div class="info-enfermedad">
-                        <strong>Prevención:</strong>
-                        <span>🔥 Cocinar correctamente y separar alimentos crudos de los listos para consumir.</span>
-                    </div>
-                </article>
-
-
-                <article class="tarjeta-enfermedad">
-                    <span class="etiqueta-enfermedad">
-                        TOXINA BACTERIANA
-                    </span>
-
-                    <h3>Botulismo</h3>
-
-                    <p>
-                        Es una enfermedad grave causada por toxinas producidas
-                        por bacterias del género <em>Clostridium</em>.
-                    </p>
-
-                    <div class="info-enfermedad">
-                        <strong>Puede asociarse a:</strong>
-                        <span>🥫 Algunos alimentos mal conservados o elaborados de forma insegura.</span>
-                    </div>
-
-                    <div class="info-enfermedad">
-                        <strong>Prevención:</strong>
-                        <span>⚠️ Utilizar métodos seguros de elaboración y conservación de alimentos.</span>
-                    </div>
-                </article>
-
-            </div>
-
-        </section>
-
-        <section class="seccion novedades">
-
-            <div class="seccion-titulo">
-                <span>📰</span>
-
-                <div>
-                    <h2>Últimas novedades</h2>
-                    <p>
-                        Artículos, dudas y datos de Bromatología.
-                    </p>
-                </div>
-            </div>
-
-            <div id="listaNoticias" class="lista-noticias">
-                <!-- Las noticias aparecerán acá automáticamente -->
-            </div>
-
-            <a href="noticias.html" class="ver-noticias">
-                Ver todas las noticias →
-            </a>
-
-        </section>
-
-        <!-- BUZÓN -->
-
-        <section class="buzon" id="buzon">
-
-            <div class="buzon-icono">
-                💌
-            </div>
-
-            <h2>¿Tenés una duda?</h2>
-
-            <p>
-                Mandanos tu pregunta de Bromatología.
-            </p>
-
-            <form
-                name="buzon"
-                method="POST"
-                data-netlify="true"
-            >
-
-                <input
-                    type="text"
-                    name="nombre"
-                    placeholder="Tu nombre (opcional)"
-                >
-
-                <textarea
-                    name="pregunta"
-                    placeholder="Escribí tu duda..."
-                    rows="5"
-                    required
-                ></textarea>
-
-                <button type="submit">
-                    💌 Enviar duda
+                <button class="navbar-toggler" type="button" 
+                        data-bs-toggle="collapse" 
+                        data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
 
-            </form>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#inicio">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#datos">Datos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Etascarrusel">ETAS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#buzon">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+            
+        <header class="hero-header text-center">
+            
+            <section class="banner-hero">
+                <div class="container py-4">
+
+                    <!-- Fila Superior: Embudo + Título + Matraz -->
+                    <div class="d-flex align-items-center justify-content-center gap-3 gap-md-4 mb-3">
+
+                        <!-- Círculo Superior Izquierdo (Embudo) -->
+                        <div class="circulo-foto">
+                            <img src="img/vino.jpg" alt="Embudo">
+                        </div>
+
+                        <!-- Bloque Central de Texto -->
+                        <div class="text-center px-2 hero-texto-block" id="inicio">
+                            <h1 class="titulo-bienvenidos">Bienvenidos</h1>
+                            <p class="bajada-texto m-0">
+                                Divulgación sobre inocuidad alimentaria,<br class="d-none d-md-block"> 
+                                ETAS y datos curiosos de Bromatología.
+                            </p>
+                        </div>
+
+                        <!-- Círculo Superior Derecho (Matraz) -->
+                        <div class="circulo-foto">
+                            <img src="img/rosa.jpg" alt="Matraz">
+                        </div>
+
+                    </div>
+
+                    <!-- Emojis decorativos -->
+                    <div class="text-center mb-3 fs-5">
+                        🔬 🧪 🧫
+                    </div>
+
+                    <!-- Fila de círculos inferiores (Microscopio) -->
+                    <div class="d-flex justify-content-center gap-3 gap-md-4 mb-3">
+                        <div class="circulo-foto">
+                            <img src="img/img1.jpg" alt="Muestra 1">
+                        </div>
+                        <div class="circulo-foto">
+                            <img src="img/img2.jpg" alt="Muestra 2">
+                        </div>
+                        <div class="circulo-foto">
+                            <img src="img/img3.jpg" alt="Muestra 3">
+                        </div>
+                    </div>
+
+                    <!-- Redes Sociales -->
+                    <div class="d-flex justify-content-center gap-4 fs-2 mt-3">
+                        <a href="https://www.instagram.com/bromatologyarg" target="_blank" class="text-dark social-hero-icon" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@bromatology_arg" target="_blank" class="text-dark social-hero-icon" aria-label="TikTok">
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+        
+        </header>
+        
+
+        <main class="app" id="datos"> 
+
+            <section class="dato rgb">
+                <span id="categoriaDato" class="categoria">
+                    🧪BROMATOLOGÍA
+                </span>
+                <h2 id="tituloDato">
+                    ¿Sabías que...?
+
+                </h2>
+
+                <p id="textoDato">
+
+                </p>
+
+                <button id="botonDato">
+                    <span class="icono-dado">🎲</span> Tirame un dato
+                </button>
+            </section>
+
+            <!-- ENFERMEDADES -->
+
+            <section class="seccion" id="etas">
+
+                <!-- Título y descripción centrados -->
+                <div class="seccion-titulo" id="Etascarrusel">
+                    <div>
+                        <h2>ETAS - Enfermedades Transmitidas por Alimentos</h2>
+                        <p>Conocé algunos de los microorganismos y peligros asociados a los alimentos.</p>
+                    </div>
+                </div>
+
+                <!-- Botones de navegación pasados ABAJO -->
+                <div class="carrusel-controles">
+                    <button class="btn-carrusel prev"
+                            aria-label="Anterior"
+                            onclick="scrollCarrusel(-1)">
+                        &#10094;
+                    </button>
+
+                    <button class="btn-carrusel next"
+                            aria-label="Siguiente"
+                            onclick="scrollCarrusel(1)">
+                        &#10095;
+                    </button>
+                </div>
+
+                <!-- Pista del carrusel -->
+                <div class="carrusel-pista" id="carruselETAS">
 
 
-        </section>
+                    <!-- SALMONELLA -->
+                    <article class="tarjeta-enfermedad salmonella">
 
-    </main>
+                        <div class="header-tarjeta">
+                            <img src="img/salmonella1.jpg"
+                                alt="Salmonella"
+                                class="avatar-microbio">
 
-    <script src="app.js"></script>
-</body>
+                            <span class="etiqueta-enfermedad">
+                                BACTERIA
+                            </span>
+                        </div>
+
+                        <h3><em>Salmonella</em></h3>
+
+                        <p>
+                            Puede causar <strong>salmonelosis</strong> y la <strong>fiebre tifoídea</strong>.
+                        </p>
+
+                        <div class="info-enfermedad">
+                            <strong>Puede asociarse a:</strong>
+                            <span>
+                                🍗 Aves, huevos y otros alimentos contaminados.
+                            </span>
+                        </div>
+
+                        <div class="info-enfermedad">
+                            <strong>Prevención:</strong>
+                            <span>
+                                🧼 Higiene, cocción completa en el centro del alimento
+                                (&gt;71 °C) y evitar la contaminación cruzada.
+                            </span>
+                        </div>
+
+                    </article>
+
+
+                    <!-- ESCHERICHIA COLI -->
+                    <article class="tarjeta-enfermedad ecoli">
+
+                        <div class="header-tarjeta">
+                            <img src="img/ecoli1.jpg"
+                                alt="Escherichia coli"
+                                class="avatar-microbio">
+
+                            <span class="etiqueta-enfermedad peligro">
+                                BACTERIA
+                            </span>
+                        </div>
+
+                        <h3><em>Escherichia coli</em> STEC</h3>
+
+                        <p>
+                            Cepas productoras de toxina Shiga que pueden causar
+                            <strong>Síndrome Urémico Hemolítico (SUH)</strong>.
+                        </p>
+
+                        <div class="info-enfermedad">
+                            <strong>Puede asociarse a:</strong>
+                            <span>
+                                🥩 Carne picada mal cocida, leche cruda, agua no potable
+                                y verduras contaminadas.
+                            </span>
+                        </div>
+
+                        <div class="info-enfermedad">
+                            <strong>Prevención:</strong>
+                            <span>
+                                🔥 Cocinar completamente la carne picada y lavar bien
+                                frutas y verduras.
+                            </span>
+                        </div>
+
+                    </article>
+
+
+                    <!-- STAPHYLOCOCCUS AUREUS -->
+                    <article class="tarjeta-enfermedad staph">
+
+                        <div class="header-tarjeta">
+                            <img src="img/stafilococo1.jpg"
+                                alt="Staphylococcus aureus"
+                                class="avatar-microbio">
+
+                            <span class="etiqueta-enfermedad enterotoxina">
+                                ENTEROTOXINA
+                            </span>
+                        </div>
+
+                        <h3><em>Staphylococcus aureus</em></h3>
+
+                        <p>
+                            Produce enterotoxinas que pueden causar
+                            <strong>intoxicación alimentaria</strong>.
+                        </p>
+
+                        <div class="info-enfermedad">
+                            <strong>Puede asociarse a:</strong>
+                            <span>
+                                🥪 Alimentos manipulados listos para consumir,
+                                cremas, rellenos y fiambres.
+                            </span>
+                        </div>
+
+                        <div class="info-enfermedad">
+                            <strong>Prevención:</strong>
+                            <span>
+                                🧤 Buena higiene del manipulador, protección de heridas
+                                y mantenimiento de la cadena de frío.
+                            </span>
+                        </div>
+
+                    </article>
+
+
+                    <!-- CLOSTRIDIUM BOTULINUM -->
+                    <article class="tarjeta-enfermedad botulismo">
+
+                        <div class="header-tarjeta">
+                            <img src="img/clostridium1.jpg"
+                                alt="Clostridium botulinum"
+                                class="avatar-microbio">
+
+                            <span class="etiqueta-enfermedad neurotoxina">
+                                NEUROTOXINA
+                            </span>
+                        </div>
+
+                        <h3><em>Clostridium botulinum</em></h3>
+
+                        <p>
+                            Produce una neurotoxina que puede causar
+                            <strong>botulismo</strong>, una intoxicación grave.
+                        </p>
+
+                        <div class="info-enfermedad">
+                            <strong>Puede asociarse a:</strong>
+                            <span>
+                                🥫 Conservas caseras, escabeches, embutidos y alimentos
+                                mal conservados.
+                            </span>
+                        </div>
+
+                        <div class="info-enfermedad">
+                            <strong>Prevención:</strong>
+                            <span>
+                                ⚠️ No consumir conservas de origen desconocido o sin etiquetas. Evitar aquellas latas que presenten:
+                                abombamientos o tapas hinchadas, expulsión de gas al abrir los recipientes, abolladuras.
+                            </span>
+                        </div>
+
+                    </article>
+
+
+                    <!-- TRICHINELLA -->
+                    <article class="tarjeta-enfermedad triquinosis">
+
+                        <div class="header-tarjeta">
+                            <img src="img/triquinosis.jpg"
+                                alt="Trichinella"
+                                class="avatar-microbio">
+
+                            <span class="etiqueta-enfermedad parasito">
+                                PARÁSITO
+                            </span>
+                        </div>
+
+                        <h3><em>Trichinella</em> spp.</h3>
+
+                        <p>
+                            Parásito que puede causar <strong>triquinosis</strong>
+                            al ingerirse carne contaminada con sus larvas.
+                        </p>
+
+                        <div class="info-enfermedad">
+                            <strong>Puede asociarse a:</strong>
+                            <span>
+                                🥩 Carne de cerdo y animales silvestres contaminados,
+                                especialmente cuando se consume cruda o insuficientemente cocida.
+                            </span>
+                        </div>
+
+                        <div class="info-enfermedad">
+                            <strong>Prevención:</strong>
+                            <span>
+                                🔥 Cocinar correctamente la carne y consumir productos
+                                provenientes de establecimientos habilitados.
+                            </span>
+                        </div>
+
+                    </article>
+
+                    <!-- LISTERIA MONOCYTOGENES -->
+                    <article class="tarjeta-enfermedad listeria">
+
+                        <div class="header-tarjeta">
+                            <img src="img/listeria.jpg"
+                                alt="Listeria monocytogenes"
+                                class="avatar-microbio">
+
+                            <span class="etiqueta-enfermedad bacteria">
+                                BACTERIA
+                            </span>
+                        </div>
+
+                        <h3><em>Listeria monocytogenes</em></h3>
+
+                        <p>
+                            Bacterias resistentes al frío que pueden causar 
+                            <strong>listeriosis</strong>, una infección grave en grupos de riesgo.
+                        </p>
+
+                        <div class="info-enfermedad">
+                            <strong>Puede asociarse a:</strong>
+                            <span>
+                                🧀 Quesos blandos, fiambres, leches no pasteurizadas y productos listos para consumir.
+                            </span>
+                        </div>
+
+                        <div class="info-enfermedad">
+                            <strong>Prevención:</strong>
+                            <span>
+                                🧼 Mantener la cadena de frío, higienizar la heladera y cocinar bien los alimentos antes del consumo.
+                            </span>
+                        </div>
+
+                    </article>
+
+                    <!-- BACILLUS CEREUS -->
+                    <article class="tarjeta-enfermedad bacillus">
+
+                        <div class="header-tarjeta">
+                            <img src="img/bacillus.jpg"
+                                alt="Bacillus cereus"
+                                class="avatar-microbio">
+
+                            <span class="etiqueta-enfermedad bacteria">
+                                BACTERIA
+                            </span>
+                        </div>
+
+                        <h3><em>Bacillus cereus</em></h3>
+
+                        <p>
+                            Bacterias formadoras de esporas que producen toxinas y causan 
+                            <strong>intoxicación alimentaria.</strong>
+                        </p>
+
+                        <div class="info-enfermedad">
+                            <strong>Puede asociarse a:</strong>
+                            <span>
+                                🍚 Arroz cocido dejado a temperatura ambiente, pastas, salsas, cremas y alimentos con almidón.
+                            </span>
+                        </div>
+
+                        <div class="info-enfermedad">
+                            <strong>Prevención:</strong>
+                            <span>
+                                ❄️ Enfriar rápidamente los alimentos cocinados y no dejarlos más de 2 horas a temperatura ambiente.
+                            </span>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <section class="seccion-pizarra">
+                <div class="seccion-titulo">
+                    <div>
+                        <h2>📌 Reglas de oro en la cocina</h2>
+                    </div>
+                </div>
+
+                <div class="contenedor-postits">
+                    <div class="postit amarillo">
+                        <h4>🧼 20 Segundos</h4>
+                        <p>Lavate las manos con agua y jabón antes de cocinar y tras manipular carne cruda.</p>
+                    </div>
+
+                    <div class="postit rosado">
+                        <h4>🚫 Separar Siempre</h4>
+                        <p>Usá tablas distintas para carnes y vegetales. No mezclar crudo y cocido en la heladera.</p>
+                    </div>
+
+                    <div class="postit verde">
+                        <h4>❄️ Zona Peligrosa</h4>
+                        <p>Entre 5 °C y 60 °C las bacterias se multiplican rápido. No dejes la comida a temperatura ambiente más de 2 horas.</p>
+                    </div>
+
+                    <div class="postit celeste">
+                        <h4>🔥 Fuego Suficiente</h4>
+                        <p>Asegurate que las carnes (especialmente picadas) no queden jugosas ni rosadas.</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- BUZÓN -->
+
+            <section class="buzon" id="buzon">
+
+                <div class="buzon-icono">
+                    <i class="bi bi-mailbox"></i>
+                </div>
+
+                <h2>¿Tenés una duda?</h2>
+
+                <p>Mandanos tu consulta.</p>
+
+                <form
+                    name="buzon"
+                    method="POST"
+                    action="/gracias.html"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                >
+                    <!-- Obligatorio: debe coincidir con el name del form -->
+                    <input type="hidden" name="form-name" value="buzon">
+
+                    <!-- Campo trampa para bots (oculto) -->
+                    <p style="display:none;">
+                        <label>No completar: <input name="bot-field"></label>
+                    </p>
+
+                    <input
+                        type="text"
+                        name="nombre"
+                        placeholder="Tu nombre (opcional)"
+                    >
+
+                    <textarea
+                        name="pregunta"
+                        placeholder="Escribí tu duda..."
+                        rows="5"
+                        required
+                    ></textarea>
+
+                    <button type="submit">
+                        <i class="bi bi-send-fill"></i>
+                        Enviar
+                    </button>
+                </form>
+
+            </section>
+
+
+
+            <div class="copyright text-center text-black">
+            
+                <footer style="text-align: center; padding: 40px 20px 20px; color: #8c7d70; font-size: 0.85rem;">
+                    <p>© 2026 - Creado para la comunidad</p>
+                </footer>
+            
+            </div>
+
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="app.js"></script>
+
+    </body>
 </html>

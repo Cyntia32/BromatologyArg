@@ -2,414 +2,794 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #fff8ed;
-    color: #252525;
     min-height: 100vh;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding-top: 90px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: radial-gradient(#d3c6b8 1.2px, transparent 1.2px);
+    background-size: 24px 24px;
 }
+
 
 .app {
     width: 100%;
-    max-width: 500px;
-    padding: 30px 20px;
+    max-width: 1000px;
+    padding-top: 10px;
 }
 
-/* Título */
-
-h1 {
-    text-align: center;
-    margin-bottom: 5px;
-    font-size: 2rem;
-    font-weight: 800;
+header {
+  width: 100%;
+  background-color: transparent; /* o el color de fondo de tu sitio */
 }
 
-.subtitulo {
-    text-align: center;
-    margin-top: 0;
-    color: #77716a;
+.navbar {
+    padding-top: 18px !important;    /* Lo despega del techo de la pantalla */
+    padding-bottom: 18px !important; /* Espacio antes de que empiece el banner */
+    width: 100%;
+    background-color: transparent !important;
+}
+
+/* --- BRAND / LOGO --- */
+.navbar-brand span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.35rem;
+    color: #2c2724 !important;
+    text-shadow: 1px 1px 0px #ffffff, 2px 3px 4px rgba(0, 0, 0, 0.15);
+    letter-spacing: 0.5px;
+}
+
+/* --- ÍCONO DE ALERTA --- */
+.icono-alerta {
+    color: #d99b26 !important; /* Forzamos el dorado suave sobre cualquier clase de Bootstrap */
+    font-size: 1.1rem;
+    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.15));
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Hover en el ícono cuando pasás el mouse por el logo */
+.navbar-brand:hover .icono-alerta {
+    color: #b87e19 !important;
+    transform: rotate(6deg) scale(1.1);
+}
+
+/* --- ENLACES DEL NAV (3D & HOVER) --- */
+.navbar-nav .nav-link {
+    font-family: 'Montserrat', sans-serif;
     font-size: 0.95rem;
+    font-weight: 600;
+    color: #4a443e !important;
+    padding: 8px 16px !important;
+    margin: 0 4px;
+    border-radius: 8px;
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
 }
 
-/* Tarjeta del dato */
+.navbar-nav .nav-link:hover {
+    color: #8c5a2b !important;
+    background-color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
 
+.navbar-nav .nav-link:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.hero-header {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* Fondo del banner que ocupa todo el ancho */
+.banner-hero {
+    width: 100%;
+    background-color: transparent;
+    padding-bottom: 0 ;
+    margin-bottom: 0;
+}
+
+/* Estilos de los círculos con imagen adentro */
+.circulo-foto {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    
+    /* Centra la imagen adentro del div circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circulo-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* Centra el enfoque de la foto */
+    
+}
+
+/* Tipografía del banner */
+.titulo-bienvenidos {
+    font-family: 'Walter Turncoat', sans-serif;
+    font-weight: 400;
+    font-size: 4rem;
+    letter-spacing: 0.02em;
+    background: linear-gradient(135deg, #ef8e33, #20170e);
+    -webkit-background-clip: text;
+    background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+    white-space: nowrap;
+    margin: 0 0 10px 0;
+}
+
+.bajada-texto {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #7c7b7d;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+/* Efecto y estilo de las redes sociales */
+.social-hero-icon {
+    font-size: 2.5rem;              
+    display: inline-block;
+    transition: transform 0.2s ease, color 0.2s ease;
+    margin-top: 70px; 
+    
+}
+
+/* Espacio entre el ícono de Instagram y el de TikTok */
+.social-hero-icon:not(:last-child) {
+    margin-right: 18px; 
+}
+
+.social-hero-icon:hover {
+    color: #9f16a9 !important;      /* Color al pasar el mouse */
+    transform: translateY(-3px);     /* Leve salto hacia arriba */
+}
+
+/* Tarjeta del dato con fondo degradado pastel */
 .dato {
-    margin-top: 25px;
-    padding: 28px;
-    background: #ffffff;
-    border-radius: 24px;
-    box-shadow: 0 10px 30px rgba(80, 55, 20, 0.08);
-    border: 1px solid #f0e5d5;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 500px;
+    height: auto; 
+    gap: 16px;
+    padding: 24px 22px; /* Espaciado interno más recogido */
+    box-sizing: border-box;
+    border-radius: 20px;
+    color: #2b262d; 
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    cursor: pointer;
+    margin: 40px auto; 
+    background: linear-gradient(125deg, 
+        #ffc6c7 0%, 
+        #ffe29a 25%, 
+        #b9fbc0 50%, 
+        #a3c4f3 75%, 
+        #f1c0e8 100%
+    );
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease infinite;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    z-index: 1;
 }
 
-/* Categoría */
+/* Animación suave para que el fondo vaya cambiando lentamente */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 
+/* Aura/Sombra suave exterior (RGB Pastel) */
+.rgb {
+    position: relative;
+    z-index: 0;
+}
+
+.rgb::after {
+    content: "";
+    background: linear-gradient(45deg,
+        #ffadad,
+        #ffd6a5,
+        #fdffb6,
+        #caffbf,
+        #9bf6ff,
+        #a0c4ff,
+        #bdb2ff,
+        #ffc6ff
+    ) repeat 0% 0% / 300% 100%;
+    position: absolute;
+    inset: -3px;
+    border-radius: 23px;
+    filter: blur(14px);
+    opacity: 0.6;
+    transform: translateZ(-1px);
+    animation: rgb 10s linear infinite;
+    z-index: -1;
+}
+
+@keyframes rgb {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Categoría (Etiqueta superior) */
 .categoria {
     display: inline-block;
     font-size: 12px;
     font-weight: 700;
-    color: #a94d16;
-    background-color: #fff0df;
-    padding: 6px 11px;
+    color: #633318;
+    background-color: rgba(255, 255, 255, 0.6); /* Fondo blanco semitransparente para resaltar */
+    padding: 6px 14px;
     border-radius: 20px;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    backdrop-filter: blur(4px);
+    animation: pulseGlow 3s infinite;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
 
 /* Título del dato */
-
 .dato h2 {
-    margin-top: 18px;
-    margin-bottom: 10px;
-    font-size: 1.35rem;
-    line-height: 1.3;
+    margin: 0;
+    font-size: 1.45rem; /* Un pelín más grande para dar buen impacto visual */
+    font-weight: 800;   /* Estilo bold bien definido */
+    color: #241c18;     /* Marrón/grafito muy oscuro para contraste alto */
+    line-height: 1.3;   /* Interlineado ajustado para títulos cortos y medianos */
+    letter-spacing: -0.3px; /* Cierra un toque las letras para un look moderno */
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.08));
 }
 
-/* Texto */
-
+/* Texto explicativo */
 .dato p {
     line-height: 1.6;
-    color: #4d4a46;
-    min-height: 70px;
+    color: #1f1826;
+    text-align: left;
+    margin: 0;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
 }
 
-/* Botón */
-
-button {
+/* Botón principal */
+.dato button {
     width: 100%;
-    padding: 14px;
-    margin-top: 15px;
+    padding: 12px 18px;
+    margin-top: 8px;
     border: none;
-    border-radius: 14px;
-    background-color: #f4c542;
-    color: #252525;
-    font-size: 16px;
-    font-weight: 700;
+    border-radius: 12px;
+    background-color: #f7a978; /* Color durazno cálido */
     cursor: pointer;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    color: #3b1e10;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(247, 169, 120, 0.3);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+    
 }
 
-button:hover {
+.dato button:hover {
+    background-color: #f59a61;
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(244, 197, 66, 0.3);
+    box-shadow: 0 6px 16px rgba(247, 169, 120, 0.4);
 }
 
-button:active {
+.dato button:active {
     transform: scale(0.98);
+}
+
+.icono-dado {
+    display: inline-block; /* Imprescindible para que la animación de rotación funcione */
+    transition: transform 0.15s ease;
+    font-size: 1.25rem;
+}
+
+.spin-dice {
+    animation: rollDice 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@keyframes rollDice {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.3); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+.fade-change {
+    animation: fadeSlide 0.4s ease forwards;
+}
+
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* =========================
    SECCIONES
 ========================= */
 
-.seccion {
-    margin-top: 55px;
-}
-
+/* Centra el título y el subtítulo */
 .seccion-titulo {
+    text-align: center;
+    margin-bottom: 24px;
     display: flex;
-    gap: 14px;
-    align-items: flex-start;
-    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
-.seccion-titulo > span {
-    font-size: 28px;
+#Etascarrusel h2 {
+    font-family: 'Walter Turncoat', sans-serif;
+    font-weight: 400;
+    background: linear-gradient(135deg, #ef8e33, #20170e);
+    -webkit-background-clip: text;
+    background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    width: fit-content;
+    margin: 80px auto 6px;   /* auto para que siga centrado */
+    font-size: 2.4rem;
+    
 }
 
-.seccion-titulo h2 {
-    margin: 0;
-    font-size: 1.4rem;
-}
 
-.seccion-titulo p {
-    margin: 6px 0 0;
-    color: #77716a;
-    font-size: 0.9rem;
+#Etascarrusel p {
+    font-size: 0.98rem;
+    color: #6b635b;
+    text-align: center;
     line-height: 1.5;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
+/* Centra el contenedor de las flechitas abajo de las tarjetas */
+.carrusel-controles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+
+/* --- PIZARRA QUE ROMPE EL FONDO PLANO --- */
+.seccion-pizarra {
+    font-family: 'Walter Turncoat', sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin: 50px auto;
+    padding: 30px 24px;
+    background: #ffffff; /* El blanco resalta sobre el cremita del body */
+    border-radius: 24px;
+    border: 1px solid #eaded0;
+    box-shadow: 0 10px 30px rgba(140, 90, 43, 0.05); /* Sombra cálida */
+    max-width: 1000px;
+    
+}
+
+.contenedor-postits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+
+}
+
+/* Post-its */
+.postit {
+    position: relative;
+    padding: 22px 18px 18px 18px;
+    border-radius: 4px 4px 15px 4px;
+    box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.postit h4 {
+    margin: 0 0 8px 0;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #2b262d;
+}
+
+.postit p {
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.45;
+    color: #4a443e;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Colores Pastel */
+.postit.amarillo { background-color: #fff3a8; transform: rotate(-1.5deg); }
+.postit.rosado   { background-color: #ffd3e2; transform: rotate(2deg); }
+.postit.verde    { background-color: #d4f8d4; transform: rotate(-2deg); }
+.postit.celeste  { background-color: #d2f0ff; transform: rotate(1.5deg); }
+
+.postit:hover {
+    transform: rotate(0deg) translateY(-6px) scale(1.02);
+    box-shadow: 6px 12px 20px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
 
 /* =========================
-   TARJETAS DE ENFERMEDADES
+   CARRUSEL DE ENFERMEDADES
 ========================= */
 
-.enfermedades {
-    display: grid;
-    gap: 16px;
-}
-
-.tarjeta-enfermedad {
-    background: #ffffff;
-    border: 1px solid #f0e5d5;
-    border-radius: 20px;
-    padding: 22px;
-    box-shadow: 0 8px 25px rgba(80, 55, 20, 0.05);
-}
-
 .etiqueta-enfermedad {
-    display: inline-block;
-    padding: 5px 9px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    padding: 5px 12px;
     border-radius: 20px;
-    background: #fff0df;
-    color: #a94d16;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
+    background: #e8f5e9;
+    color: #2e6b3a;
 }
+
+.etiqueta-enfermedad.peligro      { background: #ffe0e0; color: #a12b2b; }
+.etiqueta-enfermedad.enterotoxina { background: #fff3cd; color: #8a6200; }
+.etiqueta-enfermedad.neurotoxina  { background: #ece0ff; color: #5b2a99; }
+.etiqueta-enfermedad.parasito     { background: #ffe8d1; color: #9a4b00; }
 
 .tarjeta-enfermedad h3 {
-    margin-top: 14px;
-    margin-bottom: 8px;
-    font-size: 1.2rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.15rem;
+    margin: 0 0 8px;
+    color: #2b262d;
 }
 
-.tarjeta-enfermedad > p {
-    color: #4d4a46;
-    line-height: 1.55;
-    margin-bottom: 18px;
+.tarjeta-enfermedad p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #4a443e;
+    margin: 0 0 12px;
 }
 
 .info-enfermedad {
     display: flex;
     flex-direction: column;
-    gap: 3px;
-    padding-top: 12px;
-    margin-top: 12px;
-    border-top: 1px solid #f1ece5;
-    font-size: 0.88rem;
-}
-
-.info-enfermedad strong {
-    color: #252525;
-}
-
-.info-enfermedad span {
-    color: #66615b;
+    gap: 2px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.85rem;
     line-height: 1.45;
+    color: #4a443e;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    padding: 10px 12px;
+    margin-top: 8px;
 }
 
+/* Estructura del título y los botones */
+
+.btn-carrusel {
+    background: #ffffff;
+    border: 1px solid #f0e5d5;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #503714;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(80, 55, 20, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-carrusel:hover {
+    background: #faf5ee;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(80, 55, 20, 0.1);
+}
+
+/* Pista de deslizamiento (Scroll Snap) */
+.carrusel-pista {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 10px 4px 20px 4px; /* Opcional: da espacio a las sombras */
+    scrollbar-width: none; /* Oculta la barra en Firefox */
+}
+
+.carrusel-pista::-webkit-scrollbar {
+    display: none; /* Oculta la barra en Chrome/Safari */
+}
+
+/* Brillo superior simulando un reflejo en el vidrio */
+/* --- TARJETAS CON EFECTO VIDRIO PLATINADO / METALIZADO --- */
+.tarjeta-enfermedad {
+    flex: 0 0 calc(50% - 8px); 
+    scroll-snap-align: start;
+    
+    /* Fondo con degradado platinado semi-translúcido */
+    background: linear-gradient(
+        135deg, 
+        rgba(255, 255, 255, 0.7) 0%, 
+        rgba(225, 228, 233, 0.45) 50%, 
+        rgba(240, 242, 245, 0.6) 100%
+    );
+    
+    /* Desenfoque de vidrio espejado */
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    
+    /* Borde metalizado tipo plata/platino */
+    border: 1px solid rgba(210, 215, 222, 0.8);
+    border-radius: 24px;
+    padding: 24px;
+    
+    /* Sombra metálica suave y elegante */
+    box-shadow: 
+        0 8px 25px rgba(160, 165, 175, 0.15),
+        inset 0 1px 1px rgba(255, 255, 255, 0.9); /* Reflejo interno de luz */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Destello diagonal característico del platino */
+.tarjeta-enfermedad::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(
+        120deg, 
+        rgba(255, 255, 255, 0.4) 0%, 
+        rgba(255, 255, 255, 0) 40%, 
+        rgba(255, 255, 255, 0.2) 100%
+    );
+    pointer-events: none;
+}
+
+/* Hover: Resalta el brillo platinado y eleva la tarjeta */
+.tarjeta-enfermedad:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(
+        135deg, 
+        rgba(255, 255, 255, 0.85) 0%, 
+        rgba(232, 235, 240, 0.65) 50%, 
+        rgba(248, 249, 250, 0.75) 100%
+    );
+    border-color: rgba(255, 255, 255, 1);
+    box-shadow: 
+        0 14px 30px rgba(140, 148, 160, 0.22),
+        inset 0 1px 2px rgba(255, 255, 255, 1);
+}
+
+.header-tarjeta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.avatar-microbio {
+    width: 75px;     /* Forzamos el ancho */
+    height: 75px;      /* Forzamos el alto */
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 3px solid #ffffff;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;               /* Evita que el flexbox lo deforme o estire */
+}
+
+/* Adaptación para pantallas chicas */
+@media (max-width: 640px) {
+    .tarjeta-enfermedad {
+        flex: 0 0 85%; /* En celular se ve un 85% de la tarjeta e insinúa la siguiente */
+    }
+    .carrusel-controles {
+        display: none; /* En dispositivos táctiles no hacen falta las flechas */
+    }
+}
+
+/* Creamos la cinta con ::before */
+.postit::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-1deg);
+    width: 65px;
+    height: 18px;
+    
+    /* Color de cinta adhesiva beige/blanquecina semitransparente */
+    background-color: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(210, 200, 185, 0.4);
+    
+    /* Desenfoque y textura de cinta */
+    backdrop-filter: blur(2px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    
+    /* Bordes irregularmente recortados en los extremos */
+    clip-path: polygon(
+        0% 10%, 5% 0%, 95% 0%, 100% 10%, 
+        98% 90%, 93% 100%, 7% 100%, 2% 90%
+    );
+    z-index: 3;
+}
+
+/* Le damos leves variaciones a la cinta según el post-it para que no queden todas iguales */
+.postit.amarillo::before {
+    transform: translateX(-50%) rotate(-2deg);
+}
+
+.postit.rosado::before {
+    transform: translateX(-50%) rotate(1.5deg);
+    width: 70px;
+}
+
+.postit.verde::before {
+    transform: translateX(-50%) rotate(-1deg);
+}
+
+.postit.celeste::before {
+    transform: translateX(-50%) rotate(2.5deg);
+}
 
 /* =========================
    BUZÓN
 ========================= */
 
+/* Contenedor general de la tarjeta */
 .buzon {
-    margin-top: 55px;
-    margin-bottom: 30px;
-    padding: 28px;
-    background: #fff3d1;
-    border: 1px solid #f4d889;
-    border-radius: 24px;
-    text-align: center;
+  background-color: #fdf6e3; /* Mantiene el tono crema/calido que tenés */
+  border-radius: 20px;
+  padding: 24px 20px;     /* Reducimos el relleno interno para achicar la altura */
+  max-width: 450px;       /* <--- ACÁ ESTÁ EL TRUCO: Bajamos de 800px a 450px de ancho */
+  margin: 30px auto;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra suave opcional */
+  
 }
 
-.buzon-icono {
-    font-size: 32px;
-    margin-bottom: 8px;
+.buzon-icono i {
+  font-size: 2rem;
+  color: #333;
 }
 
 .buzon h2 {
-    margin: 0 0 8px;
-    font-size: 1.4rem;
+  margin: 10px 0 5px 0;
+  font-size: 1.5rem;
+  color: #1a1a1a;
 }
 
-.buzon > p {
-    margin: 0 auto 22px;
-    max-width: 380px;
-    color: #625b50;
-    line-height: 1.5;
+.buzon p {
+  margin-bottom: 25px;
+  color: #666;
 }
 
+/* Formulario: Organiza los elementos verticalmente con espacio entre ellos */
 .buzon form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Crea separación entre el input, textarea y botón */
+  width: 100%;
 }
 
-.buzon input,
+/* Estilo para los campos de texto */
+.buzon input[type="text"],
 .buzon textarea {
-    width: 100%;
-    border: 1px solid #e5d7b8;
-    border-radius: 12px;
-    padding: 12px 14px;
-    font-family: inherit;
-    font-size: 14px;
-    background: #ffffff;
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background-color: #ffffff;
+  box-sizing: border-box; /* Evita que los inputs se salgan del marco */
+  outline: none;
+  transition: border-color 0.2s ease;
 }
 
-.buzon textarea {
-    resize: vertical;
-}
-
-.buzon input:focus,
+.buzon input[type="text"]:focus,
 .buzon textarea:focus {
-    outline: 2px solid #f4c542;
-    border-color: transparent;
+  border-color: #333; /* Resalta levemente al hacer click */
 }
 
-.buzon button {
-    margin-top: 4px;
+/* Evita que el textarea se redimensione de forma rara */
+.buzon textarea {
+  resize: vertical;
 }
 
-.buzon small {
-    display: block;
-    margin-top: 14px;
-    color: #81796d;
-    font-size: 11px;
+/* Estilo copado para el Botón Enviar */
+.buzon button[type="submit"] {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #2b2b2b; /* Color oscuro o el que uses de principal */
+  color: #ffffff;
+  border: none;
+  border-radius: 10px; /* Hace juego con las esquinas redondas de los inputs */
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Separación entre el icono de Bootstrap y el texto */
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-/* =========================
-   NOVEDADES / BLOG
-========================= */
-
-.lista-noticias {
-    display: grid;
-    gap: 16px;
+/* Hover y Active para dar efecto de pulsación */
+.buzon button[type="submit"]:hover {
+  background-color: #444444;
 }
 
-.tarjeta-noticia {
-    background: #ffffff;
-    border: 1px solid #f0e5d5;
-    border-radius: 20px;
-    padding: 22px;
-    box-shadow: 0 8px 25px rgba(80, 55, 20, 0.05);
+.buzon button[type="submit"]:active {
+  transform: scale(0.99);
 }
 
-.etiqueta-noticia {
-    display: inline-block;
-    padding: 5px 9px;
-    border-radius: 20px;
-    background: #fff0df;
-    color: #a94d16;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-}
+/* Celulares */
+@media (max-width: 576px) {
+    .circulo-foto {
+        width: 80px;
+        height: 80px;
+    }
 
-.tarjeta-noticia h3 {
-    margin-top: 14px;
-    margin-bottom: 6px;
-    font-size: 1.15rem;
-    line-height: 1.35;
-}
-
-.fecha-noticia {
-    margin-bottom: 12px;
-    color: #999087;
-    font-size: 0.78rem;
-}
-
-.resumen-noticia {
-    margin: 0;
-    color: #4d4a46;
-    line-height: 1.55;
-    font-size: 0.92rem;
-}
-
-.ver-noticias {
-    display: block;
-    margin-top: 18px;
-    text-align: center;
-    color: #a94d16;
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.ver-noticias:hover {
-    text-decoration: underline;
-}
-
-.enlace-noticia {
-    display: block;
-    color: inherit;
-    text-decoration: none;
-}
-
-.enlace-noticia h3 {
-    color: #252525;
-}
-
-.leer-noticia {
-    display: inline-block;
-    margin-top: 15px;
-    color: #a94d16;
-    font-size: 0.88rem;
-    font-weight: 700;
-}
-
-/* =========================
-   NOTICIA INDIVIDUAL
-========================= */
-
-.volver-noticia {
-    display: inline-block;
-    margin-bottom: 25px;
-    color: #a94d16;
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.volver-noticia:hover {
-    text-decoration: underline;
-}
-
-.noticia-completa {
-    background: #ffffff;
-    border: 1px solid #f0e5d5;
-    border-radius: 24px;
-    padding: 28px;
-    box-shadow: 0 10px 30px rgba(80, 55, 20, 0.06);
-}
-
-.noticia-completa h1 {
-    text-align: left;
-    margin-top: 18px;
-    margin-bottom: 8px;
-    font-size: 1.7rem;
-    line-height: 1.25;
-}
-
-.bajada-noticia {
-    margin-top: 22px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #f1ece5;
-    color: #4d4a46;
-    font-size: 1rem;
-    line-height: 1.6;
-    font-weight: 600;
-}
-
-.contenido-noticia {
-    margin-top: 22px;
-}
-
-.contenido-noticia p {
-    color: #4d4a46;
-    line-height: 1.7;
-    margin-bottom: 18px;
-}
-
-.final-noticia {
-    display: block;
-    margin-top: 28px;
-    padding: 20px;
-    background: #fff3d1;
-    border: 1px solid #f4d889;
-    border-radius: 16px;
-    text-align: center;
-    color: #625b50;
-    line-height: 1.6;
-    font-weight: 600;
-    text-decoration: none;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.final-noticia:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(80, 55, 20, 0.08);
+    .titulo-bienvenidos {
+        font-size: 2.6rem;
+    }
 }
