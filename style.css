@@ -787,9 +787,20 @@ header {
     .circulo-foto {
         width: 80px;
         height: 80px;
+        flex-shrink: 0; /* evita que se aplasten */
     }
 
     .titulo-bienvenidos {
         font-size: 2.6rem;
+    }
+
+    /* El texto va arriba a todo el ancho y los dos círculos quedan abajo, lado a lado */
+    .hero-fila-superior {
+        flex-wrap: wrap;
+    }
+
+    .hero-texto-block {
+        order: -1;
+        flex: 0 0 100%;
     }
 }
